@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="/styles/creationpage.css">
+		<title>Accueil</title>
+	</head>
+	<body>
+		<nav>
+			<div class="p1BORDURE">
+				<table>
+					<tr>
+						<th>
+							<h1 class="p3TITRE"><img src="logo.png" alt="logo ucl" width=30% height=10% style="float:left"> Fix'It </h1>
+						</th>
+						<th>
+							<p class="p2RECHERCHE">
+								<input type="search" placeholder="Taper pour rechercher">
+							</p>
+						</th>
+						<th>
+							<p class="p4LOGIN">
+								<a href="/loginpage"><button  name="button">Se connecter</button></a>
+							</p>
+						</th>
+					</tr>
+				</table>
+			</div>
+		</nav>
+		<div>
+			<h3> Signaler nouveau incident</h3>
+			<form action="/sentsubmission" method="post">
+				<label for="description">Description:</label>
+				<input type="text" name="description" id="description" required>
+				<label for="adress">Adresse:</label>
+				<input type="text" name="address" id="address" required>
+				<button>Soumettre</button>
+			</form>
+		</div>
+	</body>
+	<script src="/script.js"></script>
+</html>

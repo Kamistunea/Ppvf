@@ -1,0 +1,38 @@
+body {
+    font-family: 'Comic Sans MS', cursive;
+    background-image: url('/404_kangaroo.jpg');
+    background-size: cover;
+    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    color: #ff3300;
+    font-size: 4em;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.5em;
+    margin-top: 0;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+a {
+    color: #3366ff;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="/styles/loginpage.css">
+		<title>Accueil</title>
+	</head>
+	<body>
+		<nav>
+			<div class="p1BORDURE">
+				<table>
+					<tr>
+						<th>
+							<h1 class="p3TITRE"><img src="logo.png" alt="logo ucl" width=30% height=10% style="float:left"> Fix'It </h1>
+						</th>
+						<th>
+							<p class="p2RECHERCHE">
+								<input type="search" value="Taper pour rechercher">
+							</p>
+						</th>
+						<th>
+							<p class="p4LOGIN">
+								<a href="/loginpage"><button  name="button">Se connecter</button></a>
+							</p>
+						</th>
+					</tr>
+				</table>
+			</div>
+		</nav>
+		<div class="container">
+			<h2>Se connecter</h2>
+			<form action="sentlogin" method="post">
+				<label for="loginEmail">Adresse email:</label>
+				<input type="email" name="loginEmail" required>
+				<label for="loginPassword">Mot de Passe:</label>
+				<input type="password" name="loginPassword" required>
+				<button type="submit" class="btn">Connexion</button>
+			</form>
+		</div>
+		<br>
+		<h2>OU</h2>
+		<br>
+		<div class="container">
+			<h2>S'enregistrer</h2>
+			<form action="/sentregister" method="post">
+				<label for="registerName">Nom Complet:</label>
+				<input type="text" name="registerName" required>
+				<label for="registerNickname">Nom d'Utilisateur:</label>
+				<input type="text" name="registerNickname" required>
+				<label for="registerEmail">Adresse email:</label>
+				<input type="email" name="registerEmail" required>
+				<label for="registerPassword">Mot de Passe:</label>
+				<input type="password" name="registerPassword" required>
+				<button type="submit" class="btn">S'enregistrer</button>
+			</form>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,8 @@
+Fonctionnalité: Création d'un incident 
+
+Scénario: L'incident est créé avec succès
+ Étant donné que la page de création d'incident est ouverte
+ Lorsque l'utilisateur remplie le champ de description
+ Et l'utilisateur remplie le champ adresse 
+ Et l'utilisateur appuie sur le boutton soumettre 
+ Alors un nouvel incident est créé  

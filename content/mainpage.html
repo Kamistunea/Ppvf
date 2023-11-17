@@ -2,8 +2,9 @@
 <html lang="fr">
 	<head>
 		<meta charset="utf-8">
-		<link rel="stylesheet" href="/styles/mainpage.css">
+		<link rel="stylesheet" href="styles/mainpage.css">
 		<title>Accueil</title>
+		<link rel="icon" type="image/x-icon" href="ucl-fav.jpg">
 	</head>
 	<body>
 		<nav>
@@ -11,11 +12,12 @@
 				<table>
 					<tr>
 						<th>
-							<h1 class="p3TITRE"><img src="logo.png" alt="logo ucl" width=30% height=10% style="float:left"> Fix'It </h1>
+							<a href="mainpage.html"><img src="logo.png" alt="logo ucl" width=20% height=10% style="float:left">  </a>
+							<h1 class="p3TITRE">Fix'it</h1>
 						</th>
 						<th>
 							<p class="p2RECHERCHE">
-								<input type="search" value="Taper pour rechercher">
+								<input type="search" id="maRecherche" name="q" placeholder="Rechercher sur le site…" />
 							</p>
 						</th>
 						<th>
@@ -35,8 +37,11 @@
 					</th>
 					<th>
 						<p class="p5DATE">
-							<label>Date :</label>
-							<input type="date">
+							date :
+							<script>
+								date = new Date().toLocaleDateString();
+								document.write(date);
+							</script>
 						</p>
 					</th>
 				</tr>

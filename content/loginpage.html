@@ -2,8 +2,9 @@
 <html lang="fr">
 	<head>
 		<meta charset="utf-8">
-		<link rel="stylesheet" href="/styles/loginpage.css">
-		<title>Accueil</title>
+		<link rel="stylesheet" href="styles/loginpage.css">
+		<title>connection</title>
+		<link rel="icon" type="image/x-icon" href="ucl-fav.jpg">
 	</head>
 	<body>
 		<nav>
@@ -11,11 +12,12 @@
 				<table>
 					<tr>
 						<th>
-							<h1 class="p3TITRE"><img src="logo.png" alt="logo ucl" width=30% height=10% style="float:left"> Fix'It </h1>
+							<a href="mainpage.html"><img src="logo.png" alt="logo ucl" width=20% height=10% style="float:left">  </a>
+							<h1 class="p3TITRE">Fix'it</h1>
 						</th>
 						<th>
 							<p class="p2RECHERCHE">
-								<input type="search" value="Taper pour rechercher">
+								<input type="search" id="maRecherche" name="q" placeholder="Rechercher sur le site…" />
 							</p>
 						</th>
 						<th>
@@ -31,9 +33,9 @@
 			<h2>Se connecter</h2>
 			<form action="sentlogin" method="post">
 				<label for="loginEmail">Adresse email:</label>
-				<input type="email" name="loginEmail" required>
+				<input type="email" name="loginEmail" required id="loginEmail">
 				<label for="loginPassword">Mot de Passe:</label>
-				<input type="password" name="loginPassword" required>
+				<input type="password" name="loginPassword" id="loginPassword" required>
 				<button type="submit" class="btn">Connexion</button>
 			</form>
 		</div>
@@ -44,13 +46,13 @@
 			<h2>S'enregistrer</h2>
 			<form action="/sentregister" method="post">
 				<label for="registerName">Nom Complet:</label>
-				<input type="text" name="registerName" required>
+				<input type="text" name="registerName" id="registerName" required>
 				<label for="registerNickname">Nom d'Utilisateur:</label>
-				<input type="text" name="registerNickname" required>
+				<input type="text" name="registerNickname" id="registerNickname" required>
 				<label for="registerEmail">Adresse email:</label>
-				<input type="email" name="registerEmail" required>
+				<input type="email" name="registerEmail" id="registerEmail" required>
 				<label for="registerPassword">Mot de Passe:</label>
-				<input type="password" name="registerPassword" required>
+				<input type="password" name="registerPassword" id="registerPassword" required>
 				<button type="submit" class="btn">S'enregistrer</button>
 			</form>
 		</div>

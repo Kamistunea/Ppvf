@@ -2,8 +2,9 @@
 <html lang="fr">
 	<head>
 		<meta charset="utf-8">
-		<link rel="stylesheet" href="/styles/creationpage.css">
-		<title>Accueil</title>
+		<link rel="stylesheet" href="styles/creationpage.css">
+		<title>ajouter un incident</title>
+		<link rel="icon" type="image/x-icon" href="ucl-fav.jpg">
 	</head>
 	<body>
 		<nav>
@@ -11,11 +12,12 @@
 				<table>
 					<tr>
 						<th>
-							<h1 class="p3TITRE"><img src="logo.png" alt="logo ucl" width=30% height=10% style="float:left"> Fix'It </h1>
+							<a href="mainpage.html"><img src="logo.png" alt="logo ucl" width=20% height=10% style="float:left">  </a>
+							<h1 class="p3TITRE">Fix'it</h1>
 						</th>
 						<th>
 							<p class="p2RECHERCHE">
-								<input type="search" placeholder="Taper pour rechercher">
+								<input type="search" id="maRecherche" name="q" placeholder="Rechercher sur le site…" />
 							</p>
 						</th>
 						<th>
@@ -31,10 +33,16 @@
 			<h3> Signaler nouveau incident</h3>
 			<form action="/sentsubmission" method="post">
 				<label for="description">Description:</label>
-				<input type="text" name="description" id="description" required>
+				<p>
+				<textarea name="description" rows="10" cols="60" id="description" required></textarea>
+				</p>
 				<label for="adress">Adresse:</label>
-				<input type="text" name="address" id="address" required>
+				<p>
+				<textarea name="adress" rows="6" cols="60" id="adress" required></textarea>
+				</p>
+				<p>
 				<button>Soumettre</button>
+				</p>
 			</form>
 		</div>
 	</body>

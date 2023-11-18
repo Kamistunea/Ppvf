@@ -4,6 +4,7 @@ const path = require('path');
 const session = require('express-session');
 const PORT = process.env.PORT || 3000;
 app.set('view engine', 'ejs');
+app.set('views', 'template');
 
 // any files in the 'content' directory can be requested by clients (browsers) and will be served by the Express server
 app.use(express.static('content'));
@@ -21,45 +22,55 @@ app.listen(PORT, () => {
 
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, './content/mainpage.html'));
-});
-
-app.get('/loginpage', (req, res) => {
-  res.sendFile(path.join(__dirname, './content/loginpage.html'));
-});
-
-app.get('/creationpage', (req, res) => {
-  res.sendFile(path.join(__dirname, './content/creationpage.html'));
-});
-
-app.get('*', (req, res) => {
-  res.status(404).sendFile(path.join(__dirname, './content/404.html'));
+  const username = req.session.username || "Se connecter";
+  res.render('mainpage.ejs', {username: username});
 });
 
 
-app.post('/sentsubmission', (req, res) => {
+app.get('/creationpage.html', (req, res) => {
+  const username = req.session.username || "Se connecter";
+  res.render('creationpage.ejs', {username: username});
+});
+
+app.post('/creationpage.html', (req, res) => {
   console.log(req.body);
   // get today's date (DD-MM-YY)
   const currentDate = new Date();
-  const formattedDate = `${currentDate.getDate()}-${currentDate.getMonth() + 1}-${currentDate.getFullYear() % 100}`;
+  const formattedDate = `${currentDate.getDate()}-${currentDate.getMonth() + 1}-${currentDate.getFullYear()}`;
   // TODO: add new submission to DataBase
-  res.sendFile(path.join(__dirname, './content/mainpage.html'));
+  const username = req.session.username || "Se connecter";
+  res.render('mainpage.ejs', {username: username});
 });
 
-app.post('/sentregister', (req, res) => {
-  console.log(req.body);
-  // TODO: add new user to DataBase
-  // TODO: open new session
-  req.session.username = req.body.registerNickname;
-  res.sendFile(path.join(__dirname, './content/mainpage.html'));
+
+app.get('/loginpage.html', (req, res) => {
+  const username = req.session.username || "Se connecter";
+  res.render('loginpage.ejs', {username: username, error: false});
 });
 
-app.post('/sentlogin', (req, res) => {
-  console.log(req.body);
-  if (true) { // TODO: verify user in DataBase
+app.post('/loginpage.html', (req, res) => {
+  // user wants to login
+  if (!req.body.registerName) {
+    console.log(req.body);
+    if (false) { // TODO: verify user in DataBase
+      // TODO: open new session
+      const username = req.session.username || "Se connecter";
+      res.render('mainpage.ejs', {username: username});
+    } else {
+      username = req.session.username || "Se connecter";
+      res.render('loginpage.ejs', {username: username, error: true});
+    } 
+  } 
+  // user wants to register
+  else {
+    console.log(req.body);
+    // TODO: add new user to DataBase
     // TODO: open new session
-    res.sendFile(path.join(__dirname, './content/mainpage.html'));
-  } else {
-    // TODO: sent "invalid user" error
+    req.session.username = req.body.registerNickname;
+  res.render('mainpage.ejs', {username: req.session.username});
   }
+});
+
+app.get('*', (req, res) => {
+  res.status(404).redirect('404.html');
 });

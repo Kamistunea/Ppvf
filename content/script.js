@@ -18,11 +18,3 @@ function create_table() {
     let tableContainer = document.getElementById('table-container');  
     tableContainer.innerHTML = table;
 };
-
-function show_username() {
-    // TODO: get username from database if in session
-    let username = null;
-    let show = username || 'Se connecter';
-    let usernameContainer = document.getElementById('username-container');  
-    usernameContainer.innerHTML = show;
-};

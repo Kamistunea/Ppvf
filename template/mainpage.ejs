@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="styles/mainpage.css">
+		<title>Accueil</title>
+		<link rel="icon" type="image/x-icon" href="ucl-fav.jpg">
+	</head>
+	<body>
+		<nav>
+			<div class="p1BORDURE">
+				<table>
+					<tr>
+						<th>
+							<a href="/"><img src="logo.png" alt="logo ucl" width=20% height=10% style="float:left">  </a>
+							<h1 class="p3TITRE">Fix'it</h1>
+						</th>
+						<th>
+							<p class="p2RECHERCHE">
+								<input type="search" id="maRecherche" name="q" placeholder="Rechercher sur le site…" />
+							</p>
+						</th>
+						<th>
+							<p class="p4LOGIN">
+								<a href="/loginpage.html"><button  name="button"><%= username %></button></a>
+							</p>
+						</th>
+					</tr>
+				</table>
+			</div>
+		</nav>
+		<div>
+			<table>
+				<tr>
+					<th>
+						<a href="/creationpage.html" class="p6LIEN">Ajouter un incident</a>
+					</th>
+					<th>
+						<p class="p5DATE">
+							date :
+							<script>
+								date = new Date().toLocaleDateString();
+								document.write(date);
+							</script>
+						</p>
+					</th>
+				</tr>
+			</table>	
+		</div>
+		<div id="table-container"></div>
+		<div>
+			<nav class="menu">
+				<ul>
+					<li><a href="#Accueil">Accueil</a></li>
+					<li><a href="#Apropos">À propos</a></li>
+					<li><a href="#Contact">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</body>
+	<script src="/script.js"></script>
+	<script>
+		// is run every time this page is loaded, set inner HTML
+		create_table();
+	</script>
+</html>

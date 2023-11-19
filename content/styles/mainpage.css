@@ -1,40 +1,131 @@
-.p1BORDURE{
+.nav-table {
+	width: 100%;
+}
+
+.col1 {
+	width: 30%;
+	margin-top:10px;
+	text-align: center;
+}
+
+.col2 {
+	width: 50%;
+	margin-top:10px;
+	text-align: center;
+	font-family: Apple Chancery, cursive;
+}
+
+.col3 {
+	width: 20%;
+	margin-top:10px;
+	text-align: center;
+}
+
+.row {
+	height: 50px;
+}
+
+.button {
+	background-color: #054b8c;
+	border-radius: 8px;
+	box-sizing: border-box;
+	color: #FFFFFF;
+	cursor: pointer;
+	display: inline-block;
+	height: 50px;
+	line-height: 20px;
+	margin: 0;
+	padding: 0 20px;
+	position: relative;
+	text-align: center;
+	vertical-align: auto;
+}
+
+body{
+	background-color: rgb(240, 239, 239);
+	font-size: 0.9em;
+    font-family: sans-serif;
+}
+
+.styled-table {
+    border-collapse:collapse;
+    min-width: 400px;
+	width: 90%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+	margin-top: 15px;
+	margin-left: auto;
+  	margin-right: auto;
+}
+
+.styled-table thead tr {
+    background-color: #054b8c;
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #d7d7d7;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #cbe3ff;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #054b8c;
+}
+
+.form {
+	margin-left: 50px;
+}
+
+.p1
+{
 	border-width: 5px;
 	border-style: solid;
 	border-color : rgb(5, 6, 6);
 }
 
-.p2RECHERCHE{
-	margin-top:10px;
-	margin-right:150px;
+.container {
+	max-width: 400px;
+	margin: 0 auto;
+	padding: 20px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	background-color: #f9f9f9;
+	text-align: center;
 }
 
-.p3TITRE{
-	margin-top:10px;
-	margin-left:400px;
-	font-family: Apple Chancery, cursive;
-
+h2 {
+	text-align: center;
 }
 
-.p4LOGIN{
-	margin-top:10px;
-	margin-right:50px;
+label, input{
+	display: block;
+	margin-bottom: 10px;
 }
 
-.p5DATE{
-	margin-top:10px;
-	margin-left:983px;
+.btn{
+	background-color: #007BFF;
+	color: white;
+	padding: 10px 15px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
 }
 
-.p6LIEN{
-	margin-top:10px;
-	margin-left:20px;
+.error-message {
+    color: rgb(189, 9, 9);
+    text-align: center;
+    padding: 10px;
 }
 
-td{
-	border: 2px solid black;
-}
-
-body{
-	background-color: rgb(174, 223, 247);
+.form-fields {
+	padding : 10 px;
+	display: inline-block;
 }

@@ -2,46 +2,42 @@
 <html lang="fr">
 	<head>
 		<meta charset="utf-8">
-		<link rel="stylesheet" href="styles/creationpage.css">
+		<link rel="stylesheet" href="styles/mainpage.css">
 		<title>ajouter un incident</title>
 		<link rel="icon" type="image/x-icon" href="ucl-fav.jpg">
 	</head>
 	<body>
 		<nav>
-			<div class="p1BORDURE">
-				<table>
+			<div>
+				<table class="nav-table">
 					<tr>
-						<th>
-							<a href="/"><img src="logo.png" alt="logo ucl" width=20% height=10% style="float:left">  </a>
-							<h1 class="p3TITRE">Fix'it</h1>
-						</th>
-						<th>
-							<p class="p2RECHERCHE">
-								<input type="search" id="maRecherche" name="q" placeholder="Rechercher sur le site…" />
-							</p>
-						</th>
-						<th>
-							<p class="p4LOGIN">
-								<a href="/loginpage.html"><button  name="button"><%= username %></button></a>
-							</p>
-						</th>
+						<td class="col1">
+							<a href="/"><img src="logo.png" alt="logo ucl" height=40px style="float:left">  </a>
+						</td>
+						<td class="col2">
+							<h1>Fix'it</h1>
+						</td>
+						<td class="col3">
+							<a href="/loginpage.html"><button class="button" name="button"><%= username %></button></a>
+						</td>
 					</tr>
+					<tr class="row"></tr>
 				</table>
 			</div>
 		</nav>
-		<div>
+		<div class="form">
 			<h3> Signaler nouveau incident</h3>
 			<form action="/creationpage.html" method="post">
 				<label for="description">Description:</label>
 				<p>
-				<textarea name="description" rows="10" cols="60" id="description" required></textarea>
+				<textarea name="description" rows="6" cols="120" id="description" required></textarea>
 				</p>
 				<label for="address">Adresse:</label>
 				<p>
-				<textarea name="address" rows="6" cols="60" id="address" required></textarea>
+				<textarea name="address" rows="4" cols="120" id="address" required></textarea>
 				</p>
 				<p>
-				<button>Soumettre</button>
+				<button class="btn">Soumettre</button>
 				</p>
 			</form>
 		</div>
